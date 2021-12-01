@@ -1,12 +1,12 @@
-package ex29;
+package ex31;
 
 
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
-import static org.junit.jupiter.api.Assertions.assertTrue;
 
-class testex29 {
+class testex31 {
 
     @Test
     void checkNum() {
@@ -14,5 +14,13 @@ class testex29 {
 
         assertFalse(actual);
     }
+
+    @Test
+    void rateCalc() {
+        double actual = App.rateCalc(22,65,55);
+
+        assertEquals(138.0,actual);
+    }
+
 
 }

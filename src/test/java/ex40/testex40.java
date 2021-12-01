@@ -1,13 +1,11 @@
-package ex39;
+package ex40;
 
 
 import org.junit.jupiter.api.Test;
 
-import java.util.ArrayList;
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-class testex39 {
+class testex40 {
     @Test
     void getFirst() {
         Employee s = new Employee("Julio", "Lopez","2020","Manager");

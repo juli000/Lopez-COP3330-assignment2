@@ -1,25 +1,24 @@
-package ex31;
+package ex38;
+
 
 
 import org.junit.jupiter.api.Test;
 
+import java.util.ArrayList;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 
-class testex31 {
-
+class testex38 {
     @Test
-    void checkNum() {
-        boolean actual = App.checkNum("a");
+    void filterCheck() {
+        ArrayList<Integer> actual = App.filterEvenNumbers("100 200 301 1000");
+        ArrayList<Integer> t = new ArrayList<>();
+        t.add(100);
+        t.add(200);
+        t.add(1000);
 
-        assertFalse(actual);
-    }
-
-    @Test
-    void rateCalc() {
-        double actual = App.rateCalc(22,65,55);
-
-        assertEquals(138.0,actual);
+        assertEquals(t,actual);
     }
 
 

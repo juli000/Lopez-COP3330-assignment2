@@ -1,16 +1,34 @@
-package ex26;
+package ex27;
+
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
-class testex26 {
+class testex27 {
 
     @Test
-    void paymentCalculator() {
-        double actual = PaymentCalculator.calculateMonthsUntilPaidOff((12.0/100.0)/365.0,5000,100.0);
+    void checkFill() {
+        boolean actual = App.checkFill("");
 
-        assertEquals(70,actual);
+        assertFalse(actual);
     }
+    @Test
+    void check2() {
+        boolean actual = App.check2("ab");
 
+        assertTrue(actual);
+    }
+    @Test
+    void checkForm() {
+        boolean actual = App.checkForm("AA-1234");
+
+        assertTrue(actual);
+    }
+    @Test
+    void checkNum() {
+        boolean actual = App.checkNum("12345");
+
+        assertTrue(actual);
+    }
 }

@@ -1,5 +1,4 @@
-package ex38;
-
+package ex39;
 
 
 import org.junit.jupiter.api.Test;
@@ -7,18 +6,25 @@ import org.junit.jupiter.api.Test;
 import java.util.ArrayList;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertFalse;
 
-class testex38 {
+class testex39 {
     @Test
-    void filterCheck() {
-        ArrayList<Integer> actual = App.filterEvenNumbers("100 200 301 1000");
-        ArrayList<Integer> t = new ArrayList<>();
-        t.add(100);
-        t.add(200);
-        t.add(1000);
-
-        assertEquals(t,actual);
+    void getFirst() {
+        Employee s = new Employee("Julio", "Lopez","2020","Manager");
+        String actual = s.getFirst();
+        assertEquals("Julio",actual);
+    }
+    @Test
+    void getPos() {
+        Employee s = new Employee("Julio", "Lopez","2020","Manager");
+        String actual = s.getPos();
+        assertEquals("2020",actual);
+    }
+    @Test
+    void getDate() {
+        Employee s = new Employee("Julio", "Lopez","2020","Manager");
+        String actual = s.getSepDate();
+        assertEquals("Manager",actual);
     }
 
 

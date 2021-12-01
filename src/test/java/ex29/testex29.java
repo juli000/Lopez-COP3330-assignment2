@@ -1,34 +1,18 @@
-package ex27;
+package ex29;
 
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
-class testex27 {
+class testex29 {
 
     @Test
-    void checkFill() {
-        boolean actual = App.checkFill("");
+    void checkNum() {
+        boolean actual = App.checkNum("a");
 
         assertFalse(actual);
     }
-    @Test
-    void check2() {
-        boolean actual = App.check2("ab");
 
-        assertTrue(actual);
-    }
-    @Test
-    void checkForm() {
-        boolean actual = App.checkForm("AA-1234");
-
-        assertTrue(actual);
-    }
-    @Test
-    void checkNum() {
-        boolean actual = App.checkNum("12345");
-
-        assertTrue(actual);
-    }
 }

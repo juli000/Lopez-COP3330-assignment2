@@ -1,4 +1,4 @@
-package ex31;
+package ex33;
 
 
 import org.junit.jupiter.api.Test;
@@ -6,21 +6,15 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 
-class testex31 {
+class testex33 {
 
     @Test
-    void checkNum() {
-        boolean actual = App.checkNum("a");
+    void pickRand() {
+        String actual = App.pickRand(new String[]{"a"});
 
-        assertFalse(actual);
+        assertEquals("a",actual);
     }
 
-    @Test
-    void rateCalc() {
-        double actual = App.rateCalc(22,65,55);
-
-        assertEquals(138.0,actual);
-    }
 
 
 }

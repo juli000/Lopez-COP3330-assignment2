@@ -1,22 +1,35 @@
-package ex24;
+package ex25;
+
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-class testex24 {
+class testex25 {
 
     @Test
-    void isAnagramReturnTrue() {
-        boolean actual= App.isAnagram("note","tone");
+    void passwordValidator() {
+        int actual = App.passwordValidator("bruh");
 
-        assertEquals(true,actual);
+        assertEquals(2,actual);
+    }
+    @Test
+    void numberCheck() {
+        int actual = App.numberCheck("123abc");
+
+        assertEquals(3,actual);
     }
 
     @Test
-    void isAnagramReturnFalse() {
-        boolean actual=App.isAnagram("note","ton");
+    void letterCheck() {
+        int actual = App.letterCheck("1234abcd");
 
-        assertEquals(false,actual);
+        assertEquals(4,actual);
+    }
+    @Test
+    void specialCheck() {
+        int actual = App.specialCheck("123abc@#$");
+
+        assertEquals(3,actual);
     }
 }

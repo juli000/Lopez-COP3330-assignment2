@@ -1,35 +1,16 @@
-package ex25;
-
+package ex26;
 
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-class testex25 {
+class testex26 {
 
     @Test
-    void passwordValidator() {
-        int actual = App.passwordValidator("bruh");
+    void paymentCalculator() {
+        double actual = PaymentCalculator.calculateMonthsUntilPaidOff((12.0/100.0)/365.0,5000,100.0);
 
-        assertEquals(2,actual);
-    }
-    @Test
-    void numberCheck() {
-        int actual = App.numberCheck("123abc");
-
-        assertEquals(3,actual);
+        assertEquals(70,actual);
     }
 
-    @Test
-    void letterCheck() {
-        int actual = App.letterCheck("1234abcd");
-
-        assertEquals(4,actual);
-    }
-    @Test
-    void specialCheck() {
-        int actual = App.specialCheck("123abc@#$");
-
-        assertEquals(3,actual);
-    }
 }

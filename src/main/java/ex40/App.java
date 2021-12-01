@@ -1,9 +1,11 @@
-package ex39;
+/*
+ *  UCF COP3330 Fall 2021 Assignment 2 Solution
+ *  Copyright 2021 Julio Lopez
+ */
+package ex40;
 
-import com.sun.source.tree.Tree;
-
-import java.util.HashMap;
 import java.util.Map;
+import java.util.Scanner;
 import java.util.TreeMap;
 
 public class App {
@@ -16,16 +18,21 @@ public class App {
         records.put(last[3], new Employee("Michaela",last[3],"District Manager","2015-12-19"));
         records.put(last[4], new Employee("Sally",last[4],"Web Developer","2015-12-18"));
         records.put(last[5], new Employee("Tou",last[5],"Software Engineer","2016-10-05"));
-        printRecords(records);
+        System.out.println("Enter a search string:");
+        Scanner s = new Scanner(System.in);
+        String in = s.nextLine();
+        printRecords(records, in);
     }
 
-    public static void printRecords(TreeMap<String, Employee> records){
+    public static void printRecords(TreeMap<String, Employee> records, String input){
         String comb = "";
         System.out.println("Name                 |Position              |Separation Date");
         System.out.println("---------------------|----------------------|----------------");
         for(Map.Entry<String, Employee> person : records.entrySet()){
             comb = person.getValue().getFirst() + " " + person.getKey();
-            System.out.printf("%-20s | %-20s | %-20s\n", comb, person.getValue().getPos(),person.getValue().getSepDate());
+            if(comb.contains(input)) {
+                System.out.printf("%-20s | %-20s | %-20s\n", comb, person.getValue().getPos(), person.getValue().getSepDate());
+            }
         }
     }
 }
